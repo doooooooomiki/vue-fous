@@ -1,5 +1,6 @@
 <script setup lang="ts">
 import { ref } from 'vue'
+import H from '@/render-functions/heading'
 
 const selectedCity = ref()
 
@@ -13,5 +14,6 @@ const cities = ref([
 </script>
 
 <template>
+  <H as="h1">Select a city</H>
   <FormKit type="dropdown" v-model="selectedCity" :drops="cities" optionLabel="name" />
 </template>
